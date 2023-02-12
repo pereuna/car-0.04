@@ -1,0 +1,14 @@
+Basic Installation
+==================
+
+   These are generic installation instructions.
+
+./configure
+make
+
+And then play
+./car
+
+make install is not yet supported.
+
+PR.
