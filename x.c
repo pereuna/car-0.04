@@ -20,19 +20,14 @@ void init_win()
     XSetFillStyle(display, gc, FillSolid);
 
     screen_colormap = DefaultColormap(display, s_num);
-    if ((XAllocNamedColor(display, screen_colormap, "red", &red, &red)) ==
-	0)
-	perror("XAllocNamedColor");
-    if ((XAllocNamedColor(display, screen_colormap, "gray", &gray, &gray))
-	== 0)
-	perror("XAllocNamedColor");
-    if ((XAllocNamedColor(display, screen_colormap, "blue", &blue, &blue))
-	== 0)
-	perror("XAllocNamedColor");
-
+    if ((XAllocNamedColor(display, screen_colormap, "red", &red, &red)) == 0)
+		perror("XAllocNamedColor");
+    if ((XAllocNamedColor(display, screen_colormap, "gray", &gray, &gray)) == 0)
+		perror("XAllocNamedColor");
+    if ((XAllocNamedColor(display, screen_colormap, "blue", &blue, &blue)) == 0)
+		perror("XAllocNamedColor");
 
     load_font(display, gc);
-
 
     b = XCreatePixmap(display, win, 800, 600, dep);
     i = load_image("rata.xpm", NULL);
